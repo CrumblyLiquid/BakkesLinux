@@ -4,6 +4,24 @@ It's possible to run BakkesMod on Linux with an up to date version of Rocket Lea
 
 Using Proton is only recommended if you're running Rocket League through Steam. If that's not the case using Wine or [Wine-GE](https://github.com/GloriousEggroll/wine-ge-custom) is advised as using Proton outside of Steam can cause issues.
 
+## Steam Deck
+
+You will need to download `protontricks` from flatpak, which can be done through the discover app. Installing `GE-Proton` is also a good idea as well. 
+
+### Non-Steam Launchers 
+If you installed Epic Games through Non-Steam Launchers, your wine prefix will be `/home/deck/.steam/steam/steamapps/compatdata/NonSteamLaunchers` (assuming you did not move to an SD Card).
+
+To find the app id, run `protontricks -c Epic` and it will show `Epic Games (APPID)` (assuming you added Epic Games to your Steam Library. The same can be done with Rocket League). 
+
+You should also make sure that you import Rocket League into Steam by using the `Find Games` button. 
+
+You will also need to change your `Launch Options` for Rocket League on steam to be `"location/to/script/script.sh" & STEAM_COMPAT_DATA_PATH="/home/deck/.steam/steam/steamapps/compatdata/NonSteamLaunchers" %command%`
+
+### Binding F2 and ESC
+
+I suggest binding some key using Steam Input to be the keyboard `F2` (open GUI) and `ESC`. When you are in the menu, you can hold down the `STEAM` button and use the right trackpad and triggers to use a mouse. 
+
+You can now follow the rest of the install steps. 
 ## Installation
 
 ### Setup
