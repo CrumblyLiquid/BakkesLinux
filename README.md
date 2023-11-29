@@ -4,6 +4,8 @@ It's possible to run BakkesMod on Linux with an up to date version of Rocket Lea
 
 Using Proton is only recommended if you're running Rocket League through Steam. If that's not the case using Wine or [Wine-GE](https://github.com/GloriousEggroll/wine-ge-custom) is advised as using Proton outside of Steam can cause issues.
 
+Check out the setup for Steam Deck [here](STEAMDECK.md).
+
 ## Installation
 
 ### Setup
