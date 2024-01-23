@@ -82,6 +82,11 @@ After starting Rocket League you can launch BakkesMod in the same way as running
 1. Using `protontricks`: `protontricks -c "'your_prefix/drive_c/Program Files/BakkesMod/BakkesMod.exe'" 252950`
 2. Using `wine`: `WINEPREFIX="your_prefix" "wine_folder/bin/wine64" "your_prefix/drive_c/Program Files/BakkesMod/BakkesMod.exe"`
 
+> [!WARNING]
+> You might see this message: `Mod is out of date, waiting for an update`.
+>
+> To work around it, you'll have to go to `Settings` and disable `Enable safe mode`. You'll be prompted with a warning before injecting.
+
 ### Automatically
 
 #### With Steam Tinker Launch
