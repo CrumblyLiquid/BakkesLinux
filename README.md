@@ -70,8 +70,10 @@ Now run the the previously downloaded `BakkesModSetup.exe`.
 
 This should start the BakkesMod installer. Go through the installation as you normally would.
 
-> [!NOTE]
-> I recommend you don't change the default installation path as it might come in handy later when setting up automatic launch and close script for BakkesMod
+> [!WARNING]
+> You'll probably have to enable the executable flag for `BakkesModSetup.exe`.
+> 
+> You can do so by running `chmod u+x ~/Downloads/BakkesModSetup.exe`
 
 ## Running BakkesMod
 
