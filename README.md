@@ -65,8 +65,7 @@ To be able to run `BakkesModSetup.exe` we need to **change the Windows version o
 Now run the the previously downloaded `BakkesModSetup.exe`.
 
 1. Using `protontricks`: `protontricks -c ~/Downloads/BakkesModSetup.exe 252950`
-2. Using `winetricks`: `WINEPREFIX="your_prefix" winetricks -c ~/Downloads/BakkesModSetup.exe`
-3. Using `wine`: `WINEPREFIX="your_prefix" "wine_folder/bin/wine64" ~/Downloads/BakkesModSetup.exe`
+2. Using `wine`: `WINEPREFIX="your_prefix" "wine_folder/bin/wine64" ~/Downloads/BakkesModSetup.exe`
 
 This should start the BakkesMod installer. Go through the installation as you normally would.
 
@@ -80,9 +79,8 @@ This should start the BakkesMod installer. Go through the installation as you no
 ### Manually
 
 After starting Rocket League you can launch BakkesMod in the same way as running `BakkesModSetup.exe`.
-1. Using `protontricks`: `protontricks -c "your_prefix/drive_c/Program Files/BakkesMod/BakkesMod.exe" 252950`
-2. Using `winetricks`: `WINEPREFIX="your_prefix" winetricks -c "your_prefix/drive_c/Program Files/BakkesMod/BakkesMod.exe"`
-3. Using `wine`: `WINEPREFIX="your_prefix" "wine_folder/bin/wine64" "your_prefix/drive_c/Program Files/BakkesMod/BakkesMod.exe"`
+1. Using `protontricks`: `protontricks -c "'your_prefix/drive_c/Program Files/BakkesMod/BakkesMod.exe'" 252950`
+2. Using `wine`: `WINEPREFIX="your_prefix" "wine_folder/bin/wine64" "your_prefix/drive_c/Program Files/BakkesMod/BakkesMod.exe"`
 
 ### Automatically
 
