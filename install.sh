@@ -30,8 +30,7 @@ echo "INFO: Running BakkesMod setup executable"
 # Make installer executable
 chmod +x "$E_ZIP/BakkesModSetup.exe"
 # Run BakkesMod installer
-# WINEDEBUG=-all suppresses debugging info, remove this if you're running into issues
-WINEDEBUG=-all protontricks -c "$E_ZIP/BakkesModSetup.exe" 252950
+protontricks-launch --appid 252950 "$E_ZIP/BakkesModSetup.exe"
 
 echo "INFO: Waiting for Steam to exit"
 while killall -0 steam 2> /dev/null; do
