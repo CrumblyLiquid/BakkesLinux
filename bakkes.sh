@@ -16,7 +16,7 @@ RL_PREFIX="$HOME/.steam/steam/steamapps/compatdata/252950"
 # xargs -d '\n' split the string given by sed and executes `dirname` on each part
 # dirname simply returns parent of the path
 # Resulting in the path to the Proton version used to run Rocket League
-PROTON=$(sed -n 4p "$RL_PREFIX"/config_info | xargs -d '\n' dirname)
+PROTON="$(sed -n 4p "$RL_PREFIX"/config_info | xargs -d '\n' dirname)"
 
 # This is the default BakkesMod installation path
 # Change this if you've installed Bakkes somewhere else
