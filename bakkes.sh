@@ -28,7 +28,7 @@ BAKKES="$RL_PREFIX/pfx/drive_c/Program Files/BakkesMod/BakkesMod.exe"
 WINESYNC="F"
 
 # Check that BakkesMod.exe exists
-if [[ -f "$BAKKES" ]]; then
+if [ -f "$BAKKES" ]; then
     # Start BakkesMod when Rocket League starts
     # killall -0 sends no signal but still performs error checking
     # that way we can detect if a program is running or not
@@ -38,7 +38,7 @@ if [[ -f "$BAKKES" ]]; then
 
     # Open BakkesMod with the correct Proton version and Wine prefix
     # Doesn't require protontricks 
-    if [ $WINESYNC = "E" ]; then
+    if [ "$WINESYNC" = "E" ]; then
         echo "IMPORTANT! Running Rocket League with WINEESYNC=1" 
         echo "IMPORTANT! If BakkesMod fails to launch, switch to WINEFSYNC=1"
         WINEESYNC=1 WINEPREFIX="$RL_PREFIX/pfx" "$PROTON/bin/wine64" "$BAKKES" &
