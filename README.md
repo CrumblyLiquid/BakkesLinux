@@ -28,7 +28,7 @@ You can either:
 > Use this option **only with Proton** (not Wine, Wine-GE or other options)
 
 2. Install `winetricks`
-3. Use plain `wine`
+3. Use plain `wine` (don't install Wine yourself, use the one that's used by your launcher to launch Rocket League)
 
 ### Finding wine prefix
 
@@ -43,6 +43,8 @@ You'll need to **find the path to Proton/Wine** that is used for Rocket League.
 
 > [!TIP]
 > On Steam this can be achieved by inspecting `~/.steam/steam/steamapps/compatdata/252950/config_info` and noting the path on the 4. line without the last directory (the result should end with `/dist`). For me it's `~/.local/share/Steam/steamapps/common/Proton 7.0/dist` for example.
+>
+> You can achieve that with this command: `sed -n 4p ~/.steam/steam/steamapps/compatdata/252950/config_info | xargs -d '\n' dirname`
 >
 > For installations other than Steam (e.g. Lutris, Heroic, Bottles, ...) you'll have to find this yourself.
 
@@ -86,6 +88,11 @@ After starting Rocket League you can launch BakkesMod in the same way as running
 > You might see this message: `Mod is out of date, waiting for an update`.
 >
 > To work around it, you'll have to go to `Settings` and disable `Enable safe mode`. You'll be prompted with a warning before injecting.
+
+> [!TIP]
+> You can find the path to `BakkesMod.exe` using this command: `find ~ -name "BakkesMod.exe" 2> /dev/null`
+> 
+> The path should probably end with `drive_c/Program Files/BakkesMod/BakkesMod.exe`
 
 ### Automatically
 
