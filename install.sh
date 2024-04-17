@@ -41,6 +41,7 @@ unzip -d "$E_ZIP" "$ZIP"
 rm "$ZIP"
 
 echo "INFO: Waiting for RocketLeague to exit"
+echo "INFO: You have to manually close Rocket League in order to modify the prefix"
 while killall -0 RocketLeague.exe &> /dev/null; do
     sleep 1
 done
@@ -62,6 +63,7 @@ read -p "QUESTION: Do you want to set launch options for RocketLeague? (y/n) " y
 case "$yn" in 
     y|Y )
         echo "INFO: Waiting for Steam to exit"
+        echo "INFO: You have to manually close Steam to be able to set launch options"
         while killall -0 steam &> /dev/null; do
             sleep 1
         done
