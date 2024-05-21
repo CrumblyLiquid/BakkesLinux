@@ -7,7 +7,7 @@ If you're on the **Steam Deck** start [here](STEAMDECK.md), otherwise continue o
 > [!WARNING]
 > This guide is very Steam centric (as that's what I use) but the concepts apply to different launchers as well.
 >
-> If have experience with different launchers and want to share it, check out [Contributing](#contributing).
+> If you have experience with different launchers and want to share it, check out [Contributing](#contributing).
 
 > [!IMPORTANT]
 > Using Proton is only recommended if you're running Rocket League through Steam. If that's not the case using Wine or [Wine-GE](https://github.com/GloriousEggroll/wine-ge-custom) is advised as using Proton outside of Steam can cause issues.
