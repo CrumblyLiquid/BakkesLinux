@@ -35,7 +35,7 @@ You can either:
 You'll need to **find what [wine prefix](https://wiki.archlinux.org/title/wine#WINEPREFIX) the game is running in**.
 
 > [!TIP]
-> On Steam this is usually `~/.steam/steam/steamapps/compatdata/252950/pfx` or a simmilar path (note that the AppID of Rocket League on Steam is `252950`). Once again for other installations you'll have to find this yourself.
+> On Steam this is usually `~/.steam/steam/steamapps/compatdata/252950/pfx` or a similar path (note that the AppID of Rocket League on Steam is `252950`). Once again for other installations you'll have to find this yourself.
 
 ### Finding Wine/Proton folder
 
