@@ -12,6 +12,11 @@ If you're on the **Steam Deck** start [here](STEAMDECK.md), otherwise continue o
 > [!IMPORTANT]
 > Using Proton is only recommended if you're running Rocket League through Steam. If that's not the case using Wine or [Wine-GE](https://github.com/GloriousEggroll/wine-ge-custom) is advised as using Proton outside of Steam can cause issues.
 
+> [!TIP]
+> Visit the [troubleshooting page](TROUBLESHOOTING.md) if you're having issues installing or running BakkesMod.
+>
+> If all else fails you can create an issue [here](https://github.com/CrumblyLiquid/BakkesLinux/issues).
+
 ## Setup
 
 ### Download BakkesMod
