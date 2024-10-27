@@ -117,12 +117,21 @@ You can start BakkesMod automatically with [Steam Tinker Launch](https://github.
 > You might have to change some paths if you're using [bakkes.sh](./bakkes.sh).
 
 3. In Steam go to `Library` and find Rocket League in the menu on the left. Right-click on it and select `Properties`
-4. In the `General` tab you will see `Launch options` text field. Set that to `"/path/to/the/script.sh" & %command%` (you can put any other launch options before `%command%`)
+4. In the `General` tab you will see `Launch options` text field. Set that to `"/path/to/bakkes.sh" & %command%` (you can put any other launch options before `%command%`)
 
 > [!WARNING]
 > You might have to use absolute path to the script (also without `"$HOME"` or `~`).
 
 **And that's it!** You should now have a working BakkesMod installation that will launch alongside Rocket League and close when Rocket League does.
+
+> [!TIP]
+> If you're using this script and BakkesMod needs updating, it will ask to kill Rocket League
+> (to make sure the BakkesMod update doesn't mess anything up)
+> after which this script will automatically kill BakkesMod as it assumes you've stopped playing.
+>
+> You can work around this by running [bakkes.sh](./bakkes.sh) directly with the `--skip-checks` flag.
+>
+> Run `/path/to/bakkes.sh --skip-checks`
 
 ## My setup
 

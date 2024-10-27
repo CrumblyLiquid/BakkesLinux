@@ -7,6 +7,15 @@
 # Set Rocket League launch options to `"/path/to/this/script.sh" & %command%`
 # Put any other launch options before `%command%` like normal
 
+# Run this script with --skip-checks to skip the "is Rocket League running" checks
+# This can be useful if you want to launch BakkesMod on its own
+# to for example update BakkesMod without the script closing BakkesMod after RL closes
+
+SKIP_CHECKS=false
+if [ $# -ge 1 ] && [ "$1" = "--skip-checks" ]; then
+    SKIP_CHECKS=true
+fi
+
 # WINEPREFIX for Rocket League
 RL_PREFIX="$HOME/.steam/steam/steamapps/compatdata/252950"
 
@@ -32,7 +41,7 @@ if [ -f "$BAKKES" ]; then
     # Start BakkesMod when Rocket League starts
     # killall -0 sends no signal but still performs error checking
     # that way we can detect if a program is running or not
-    while ! killall -0 RocketLeague.exe 2> /dev/null; do
+    while ! killall -0 RocketLeague.exe 2> /dev/null && ! $SKIP_CHECKS; do
         sleep 1
     done
 
@@ -48,11 +57,19 @@ if [ -f "$BAKKES" ]; then
         WINEFSYNC=1 WINEPREFIX="$RL_PREFIX/pfx" "$PROTON/bin/wine64" "$BAKKES" &
     fi
 
+    # BakkesMod doesn't launch with the approach above on NixOS
+    # and this is a possible workaround
+    # protontricks-launch --appid 252950 "$BAKKES" &
+
+
     # Kill BakkesMod process when Rocket League is closed
-    while killall -0 RocketLeague.exe 2> /dev/null; do
+    while killall -0 RocketLeague.exe 2> /dev/null && ! $SKIP_CHECKS; do
         sleep 1
     done
-    killall BakkesMod.exe
+
+    if ! $SKIP_CHECKS; then
+        killall BakkesMod.exe
+    fi
 else
     echo "$BAKKES doesn't exist! ABORTING!"
 fi
