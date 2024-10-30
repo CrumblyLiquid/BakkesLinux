@@ -83,6 +83,11 @@ This should start the BakkesMod installer. Go through the installation as you no
 
 ## Running BakkesMod
 
+> [!TIP]
+> Visit the [troubleshooting page](TROUBLESHOOTING.md) if you're having issues running BakkesMod or injecting into Rocket League.
+>
+> If all else fails you can create an issue [here](https://github.com/CrumblyLiquid/BakkesLinux/issues).
+
 ### Manually
 
 After starting Rocket League you can launch BakkesMod in the same way as running `BakkesModSetup.exe`.
