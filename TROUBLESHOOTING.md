@@ -40,5 +40,9 @@ For example if you're using the Flatpak version of `protontricks` the installati
 will work but BakkesMod won't be able to inject into Rocket League because
 of the Flatpak sandbox. ([#12](https://github.com/CrumblyLiquid/BakkesLinux/issues/12))
 
+You can work around this by either using a non-Flatpak version of `protontricks`
+or by using one of the other ways of launching BakkesMod
+(using the `wine`/`proton` binary directly or using [`bakkes.sh`](./bakkes.sh)).
+
 The same might happen if you're running Steam through Flatpak and are
 trying to run `bakkes.sh` throuh the commandline outside of the Flatpak sandbox.
