@@ -30,3 +30,15 @@ This can be achieved by prefixing the BakkesMod launch command with `WINEFSYNC=1
 > Within **Steam**, **esync** is enabled by default, and **fsync** is enabled by default if your system supports it.
 > In **Lutris**, for **esync** you need to enable in in the runner options,
 > and for **fsync** you can add WINEFSYNC=1 as an environmental variable.
+
+## Flatpak
+
+If you've installed **Steam as Flatpak** or installed **`protontricks` as Flatpak**
+you might have **problems installing or running** BakkesMod due to the **Flatpak sandboxing**.
+
+For example if you're using the Flatpak version of `protontricks` the installation
+will work but BakkesMod won't be able to inject into Rocket League because
+of the Flatpak sandbox. ([#12](https://github.com/CrumblyLiquid/BakkesLinux/issues/12))
+
+The same might happen if you're running Steam through Flatpak and are
+trying to run `bakkes.sh` throuh the commandline outside of the Flatpak sandbox.
