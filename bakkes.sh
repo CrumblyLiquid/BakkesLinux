@@ -44,6 +44,7 @@ if [ -f "$BAKKES" ]; then
     while ! killall -0 RocketLeague.exe 2> /dev/null && ! $SKIP_CHECKS; do
         sleep 1
     done
+    GAME_PID=$(ps cax | grep RocketLeague.exe | grep -Eo '^[0-9]+')
 
     # Open BakkesMod with the correct Proton version and Wine prefix
     # Doesn't require protontricks 
@@ -63,9 +64,7 @@ if [ -f "$BAKKES" ]; then
 
 
     # Kill BakkesMod process when Rocket League is closed
-    while killall -0 RocketLeague.exe 2> /dev/null && ! $SKIP_CHECKS; do
-        sleep 1
-    done
+    tail --pid=$GAME_PID -f /dev/null
 
     if ! $SKIP_CHECKS; then
         killall BakkesMod.exe
