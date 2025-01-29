@@ -44,7 +44,7 @@ if [ -f "$BAKKES" ]; then
     while ! killall -0 RocketLeague.exe 2> /dev/null && ! $SKIP_CHECKS; do
         sleep 1
     done
-    GAME_PID=$(ps cax | grep RocketLeague.exe | grep -Eo '^[0-9]+')
+    GAME_PID=$(ps cax | grep RocketLeague.exe | grep -Eo '^\s*[0-9]+\s' | xargs)
 
     # Open BakkesMod with the correct Proton version and Wine prefix
     # Doesn't require protontricks 
