@@ -41,9 +41,10 @@ if [ -f "$BAKKES" ]; then
     # Start BakkesMod when Rocket League starts
     # killall -0 sends no signal but still performs error checking
     # that way we can detect if a program is running or not
-    while ! killall -0 RocketLeague.exe 2> /dev/null && ! $SKIP_CHECKS; do
+    while ! pgrep RocketLeague 2> /dev/null && ! $SKIP_CHECKS; do
         sleep 1
     done
+    GAME_PID=$(pgrep RocketLeague)
 
     # Open BakkesMod with the correct Proton version and Wine prefix
     # Doesn't require protontricks 
@@ -63,9 +64,7 @@ if [ -f "$BAKKES" ]; then
 
 
     # Kill BakkesMod process when Rocket League is closed
-    while killall -0 RocketLeague.exe 2> /dev/null && ! $SKIP_CHECKS; do
-        sleep 1
-    done
+    tail --pid=$GAME_PID -f /dev/null
 
     if ! $SKIP_CHECKS; then
         killall BakkesMod.exe
