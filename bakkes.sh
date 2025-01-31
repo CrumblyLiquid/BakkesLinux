@@ -59,14 +59,17 @@ if [ -f "$BAKKES" ]; then
 
     # Open BakkesMod with the correct Proton version and Wine prefix
     # Doesn't require protontricks 
+    BAKKES_PID="-1"
     if [ "$WINESYNC" = "E" ]; then
         echo "IMPORTANT! Running BakkesMod with WINEESYNC=1" 
         echo "IMPORTANT! If BakkesMod fails to launch, try switching to WINEFSYNC=1"
         WINEESYNC=1 WINEPREFIX="$RL_PREFIX/pfx" "$PROTON/bin/wine64" "$BAKKES" &
+        BAKKES_PID=$!
     else
         echo "IMPORTANT! Running BakkesMod with WINEFSYNC=1" 
         echo "IMPORTANT! If BakkesMod fails to launch, try switching WINEESYNC=1"
         WINEFSYNC=1 WINEPREFIX="$RL_PREFIX/pfx" "$PROTON/bin/wine64" "$BAKKES" &
+        BAKKES_PID=$!
     fi
 
     # BakkesMod doesn't launch with the approach above on NixOS
@@ -77,7 +80,7 @@ if [ -f "$BAKKES" ]; then
     if ! $SKIP_CHECKS; then
         # Wait until Rocket League closes
         tail --pid="$GAME_PID" -f /dev/null
-        killall BakkesMod.exe
+        kill "${BAKKES_PID}"
     fi
 else
     echo "$BAKKES doesn't exist! ABORTING!"
