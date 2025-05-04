@@ -5,6 +5,12 @@ If you're having trouble running BakkesMod, try skimming through the issues outl
 If that doesn't help, try referencing [BakkesLinux Issues](https://github.com/CrumblyLiquid/BakkesLinux/issues)
 or the original [BakkesMod on Linux issue](https://github.com/bakkesmodorg/BakkesMod2-Plugins/issues/2)
 
+## Failure to inject
+
+If you have trouble getting BakkesMod to inject into Rocket League,
+you might want to try **disabling** the `Enable safe mode` options
+or increase the injection timeout ([source](https://github.com/bakkesmodorg/BakkesMod2-Plugins/issues/2#issuecomment-2849309769)).
+
 ## WINEFSYNC/WINEESYNC
 
 If you're trying to launch BakkesMod and you get the following (or simmilar) error:
