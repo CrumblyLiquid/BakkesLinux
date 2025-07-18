@@ -47,9 +47,9 @@ You'll need to **find what [wine prefix](https://wiki.archlinux.org/title/wine#W
 You'll need to **find the path to Proton/Wine** that is used for Rocket League. 
 
 > [!TIP]
-> On Steam this can be achieved by inspecting `~/.steam/steam/steamapps/compatdata/252950/config_info` and noting the path on the 4. line without the last directory (the result should end with `/dist`). For me it's `~/.local/share/Steam/steamapps/common/Proton 7.0/dist` for example.
+> On Steam this can be achieved by inspecting `~/.steam/steam/steamapps/compatdata/252950/config_info` and noting the path on the 3. line without the last directory (the result should end with `/dist`). For me it's `~/.local/share/Steam/steamapps/common/Proton 7.0/dist` for example.
 >
-> You can achieve that with this command: `sed -n 4p ~/.steam/steam/steamapps/compatdata/252950/config_info | xargs -d '\n' dirname`
+> You can achieve that with this command: `sed -n 3p ~/.steam/steam/steamapps/compatdata/252950/config_info | xargs -d '\n' dirname`
 >
 > For installations other than Steam (e.g. Lutris, Heroic, Bottles, ...) you'll have to find this yourself.
 
