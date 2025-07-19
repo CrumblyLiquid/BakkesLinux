@@ -1,6 +1,8 @@
 # Running BakkesMod on Linux via Proton/Wine
 
-This is a guide to help you set up BakkesMod for Rocket League on Linux. It will show you how to install and run BakkesMod with an up to date version of Rocket League through the [Proton](https://github.com/ValveSoftware/Proton/)/[Wine](https://www.winehq.org/) compatibility layer.
+This is a guide to help you set up BakkesMod for Rocket League on Linux.
+It will show you how to install and run BakkesMod with an up to date version of Rocket League
+through the [Proton](https://github.com/ValveSoftware/Proton/)/[Wine](https://www.winehq.org/) compatibility layer.
 
 If you're on the **Steam Deck** start [here](STEAMDECK.md), otherwise continue on :)
 
@@ -10,7 +12,18 @@ If you're on the **Steam Deck** start [here](STEAMDECK.md), otherwise continue o
 > If you have experience with different launchers and want to share it, check out [Contributing](#contributing).
 
 > [!IMPORTANT]
-> Using Proton is only recommended if you're running Rocket League through Steam. If that's not the case using Wine or [Wine-GE](https://github.com/GloriousEggroll/wine-ge-custom) is advised as using Proton outside of Steam can cause issues.
+> Using Proton is only recommended if you're running Rocket League through Steam.
+> If that's not the case using Wine or [Wine-GE](https://github.com/GloriousEggroll/wine-ge-custom)
+> is advised as using Proton outside of Steam can cause issues.
+
+> [!TIP]
+> If you're using Arch Linux or one of its derivatives you might want to try installing
+> [`bakkesmod-steam`](https://aur.archlinux.org/packages/bakkesmod-steam) or
+> [`bakkesmod-legendary`](https://aur.archlinux.org/packages/bakkesmod-legendary) from the AUR.
+>
+> More instructions are at [bakkesmod-arch](https://github.com/kentslaney/bakkesmod-arch).
+> I would still recommend reading through this guide to have an idea how the setup works
+> so you can do troubleshooting if needed.
 
 > [!TIP]
 > Visit the [troubleshooting page](TROUBLESHOOTING.md) if you're having issues installing or running BakkesMod.
